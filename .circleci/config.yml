@@ -42,8 +42,13 @@ jobs:
           command:
             export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
             export APPLITOOLS_API_KEY
-            pip3 install -r requirements.txt
-            pytest tutorial.py
+            sudo pip install pipenv
+            pipenv install
+            pipenv run python tutorial.py test
+
+
+            #pip3 install -r requirements.txt
+            #pytest tutorial.py
             #mvn test
             #run tutorial.py
             #

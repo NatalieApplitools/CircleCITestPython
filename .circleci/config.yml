@@ -44,7 +44,8 @@ jobs:
             export APPLITOOLS_API_KEY
             sudo pip install pipenv
             pipenv install
-            pipenv run python tutorial.py test
+            pipenv run python
+            #tutorial.py test
 
 
             #pip3 install -r requirements.txt

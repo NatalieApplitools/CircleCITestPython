@@ -47,7 +47,7 @@ def eyes_setup(runner, batch_info):
     """
     eyes = Eyes(runner)
     # Initialize the eyes SDK and set your private API key.
-    eyes.api_key = os.environ["APPLITOOLS_API_KEY"]
+    eyes.api_key = os.environ.get('APPLITOOLS_API_KEY')
     eyes.configure.batch = batch_info
     yield eyes
     # If the test was aborted before eyes.close was called, ends the test as aborted.

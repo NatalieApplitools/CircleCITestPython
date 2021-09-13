@@ -42,4 +42,5 @@ jobs:
           command:
             export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
             export APPLITOOLS_API_KEY
-            mvn run 
+            mvn test
+            #run tutorial.py

@@ -38,4 +38,7 @@ jobs:
       - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
-          command: pytest
+          command:
+            export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
+            export APPLITOOLS_API_KEY
+            mvn run 
